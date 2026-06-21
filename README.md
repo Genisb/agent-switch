@@ -61,9 +61,9 @@ Create a new Skill while working in Copilot? Switch to Claude and it's already t
 | Piece | Claude Code | GitHub Copilot | Codex | Composer (Cursor) |
 |---|---|---|---|---|
 | Manual | `CLAUDE.md` | `.github/copilot-instructions.md` | `AGENTS.md` | `.cursor/rules/*.mdc` |
-| Skills | `.claude/skills/<name>/SKILL.md` | `.github/skills/<name>/SKILL.md` | `.codex/skills/<name>/SKILL.md` | — |
+| Skills | `.claude/skills/<name>/SKILL.md` | `.github/skills/<name>/SKILL.md` | `.codex/skills/<name>/SKILL.md` | `.cursor/skills/<name>/SKILL.md` |
 | Subagents | `.claude/agents/<name>.md` | `.github/agents/<name>.agent.md` | `.codex/agents/<name>.toml` | `.cursor/agents/<name>.md` |
-| Hooks | `.claude/settings.json` + scripts | `.github/hooks/config.json` + scripts | `.codex/hooks.json` + scripts | — |
+| Hooks | `.claude/settings.json` + scripts | `.github/hooks/config.json` + scripts | `.codex/hooks.json` + scripts | `.cursor/hooks.json` + `.cursor/hooks/<name>.sh` |
 
 `SKILL.md` is a Markdown-plus-YAML-frontmatter standard shared by Claude Code, Copilot, and Codex, so those three translate it directly. Subagents follow the same pattern across Claude Code, Copilot, and Composer — Markdown with YAML frontmatter, just a different file extension and folder per tool. Codex is the one tool here with a structurally different subagent format — `.toml` instead of Markdown frontmatter — so that translation rewrites the file format, not just the folder.
 
@@ -81,16 +81,16 @@ Model names get translated by **capability tier**, not exact SKU — there's no 
 
 ## Quick start
 
-\`\`\`bash
-git clone https://github.com/<your-username>/ai-infra-translate.git
-cd ai-infra-translate
-chmod +x adaptar.sh
+<br>
+git clone https://github.com/<your-username>/ai-infra-translate.git <br>
+cd ai-infra-translate <br>
+chmod +x adaptar.sh <br>
 
-# you already have Claude Code infra (.claude/) set up? translate it:
-./adaptar.sh copilot
-./adaptar.sh codex
-./adaptar.sh composer
-\`\`\`
+# you already have Claude Code infra (.claude/) set up? translate it: <br>
+./adaptar.sh copilot <br>
+./adaptar.sh codex <br>
+./adaptar.sh composer <br>
+
 
 Requires Node.js ≥ 18. No external dependencies — the YAML/JSON/TOML parsing is hand-rolled on purpose, so you don't need `jq` or `yq` installed on every machine.
 
