@@ -16,19 +16,19 @@ Stop maintaining four copies of your AI config by hand. Tell the script which to
 </div>
 
 <br>
+<br>
 
-\`\`\`
-$ ./adaptar.sh copilot
-→ Borrando infraestructura de Copilot anterior...
-→ Traduciendo desde Claude Code...
-✓ Manual traducido: CLAUDE.md → .github/copilot-instructions.md
-✓ 2 skill(s) traducida(s): crear-test, revisar-codigo
-✓ 2 subagente(s) traducido(s): revisor-logica, revisor-tests
-✓ 2 hook(s) traducido(s)
-→ Quitando la infraestructura de Claude Code, ya traducida...
+$ ./adaptar.sh copilot<br>
+→ Borrando infraestructura de Copilot anterior...<br>
+→ Traduciendo desde Claude Code...<br>
+✓ Manual traducido: CLAUDE.md → .github/copilot-instructions.md<br>
+✓ 2 skill(s) traducida(s): crear-test, revisar-codigo<br>
+✓ 2 subagente(s) traducido(s): revisor-logica, revisor-tests<br>
+✓ 2 hook(s) traducido(s)<br>
+→ Quitando la infraestructura de Claude Code, ya traducida...<br>
 
 ✓ Listo. Ahora solo existe la infraestructura de Copilot.
-\`\`\`
+
 
 <br>
 
@@ -107,7 +107,7 @@ Earlier versions of this used a single shared `AGENTS.md` file copied around wit
 
 ## Contributing
 
-PRs welcome. See [`CONTRIBUTING.md`](CONTRIBUTING.md). If you hit a real bug, [open an issue](../../issues/new/choose) with the exact command and output; "doesn't work" without a repro is hard to act on.
+If you hit a real bug, [open an issue](../../issues/new/choose) with the exact command and output; "doesn't work" without a repro is hard to act on.
 
 ## License
 
