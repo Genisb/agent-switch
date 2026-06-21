@@ -1,0 +1,7 @@
+{
+  "name": "agent-switcher",
+  "version": "1.0.0",
+  "description": "Translate AI Infraestructure",
+  "type": "module",
+  "private": true
+}
